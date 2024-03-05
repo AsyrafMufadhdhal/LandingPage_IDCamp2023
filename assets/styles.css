@@ -1,0 +1,490 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --warna1: #dafffb;
+  --warna2: #64ccc5;
+  --warna3: #176b87;
+  --warna4: #001c30;
+  --warna5: white;
+  --warna6: black;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: "Comfortaa", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+nav .nav-box {
+  background-color: var(--warna5);
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-inline: auto;
+  padding: 1rem 7.7svw;
+
+  position: fixed;
+  top: 0;
+  z-index: 99;
+
+  border-bottom: 2px solid whitesmoke;
+}
+
+nav .nav-box .logo img {
+  width: 10rem;
+}
+
+.nav-box .menu-list ul {
+  padding: 0;
+  display: flex;
+  column-gap: 2rem;
+}
+
+.nav-box .menu-list ul li {
+  list-style-type: none;
+}
+
+.nav-box .menu-list ul li a {
+  text-decoration: none;
+  color: var(--warna3);
+  border: 1px solid transparent;
+  font-weight: 400;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-box .menu-list ul li:hover a {
+  border: 1px solid var(--warna3);
+  box-shadow: 3px 2px 7px 3px var(--warna1);
+}
+
+.nav-box .menu-list ul li:active a {
+  background-color: var(--warna3);
+  color: var(--warna1);
+  font-weight: 600;
+}
+
+main {
+  max-width: 100%;
+  width: 100%;
+}
+
+.banner {
+  background-color: var(--warna1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 7.7svw;
+  height: 90vh;
+  padding-top: 10svh;
+}
+
+.banner-desc {
+  flex-basis: 33vw;
+}
+
+.banner .banner-desc h1 {
+  font-size: 3rem;
+  color: var(--warna4);
+  margin-inline: 0;
+  margin-bottom: 2svh 0svh;
+}
+
+.banner .banner-desc p {
+  font-size: 1.2rem;
+  color: var(--warna3);
+  line-height: 4svh;
+  margin-inline: 0;
+  margin-bottom: 5svh;
+}
+
+.banner .banner-desc button {
+  padding: 0.5rem 1rem;
+  width: 15rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  font-family: "Comfortaa", sans-serif;
+  background: linear-gradient(to right, var(--warna3), var(--warna2));
+  color: var(--warna5);
+  border: 3px solid var(--warna1);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+
+.banner .banner-desc button:hover {
+  border: 3px solid var(--warna3);
+  color: var(--warna3);
+  background: transparent;
+}
+
+.banner .banner-img img {
+  width: 31svw;
+}
+
+.about,
+.service,
+.contact {
+  display: flex;
+  flex-direction: column;
+  padding-inline: 7.7svw;
+  padding-block: 7svh;
+}
+
+.about > h2 {
+  font-size: 1.7rem;
+  color: var(--warna3);
+  font-weight: 700;
+}
+
+.about > p {
+  line-height: 2.5rem;
+  text-align: justify;
+  font-size: 1rem;
+  color: var(--warna4);
+}
+
+.about > h3 {
+  font-size: 1.1rem;
+  color: var(--warna3);
+  text-align: center;
+  font-weight: 700;
+  padding: 1.5rem;
+}
+
+.about .tentang-item ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0;
+}
+
+.about .tentang-item ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style-type: none;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--warna3);
+  flex-basis: 15svw;
+}
+
+.service h2 {
+  text-align: center;
+  margin-bottom: 7svh;
+  color: var(--warna3);
+  font-weight: 700;
+}
+
+.service .layanan-list ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+.service .layanan-list ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  list-style-type: none;
+  flex-basis: 20svw;
+  row-gap: 1rem;
+  padding: 3rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 3px 5px 7px 5px #dafffb;
+  border: 3px solid transparent;
+}
+
+.service .layanan-list ul li:hover {
+  border: 3px solid var(--warna2);
+  box-shadow: none;
+}
+
+.service .layanan-list ul li img {
+  width: 13svw;
+}
+
+.service .layanan-list ul li h3 {
+  color: var(--warna2);
+  font-weight: 700;
+}
+
+.service .layanan-list ul li p {
+  color: var(--warna3);
+  font-weight: 400;
+  font-size: 0.85rem;
+  text-align: center;
+  line-height: 1.5rem;
+}
+
+.contact h2 {
+  margin-bottom: 1svh;
+  color: var(--warna3);
+  font-weight: 700;
+}
+
+.contact .kontak-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 5rem;
+  justify-content: center;
+}
+
+.contact .kontak-list img {
+  width: 35svw;
+}
+
+.contact .kontak-list,
+.kontak-desc {
+  text-align: center;
+  color: var(--warna4);
+  line-height: 2rem;
+}
+
+.contact .kontak-list .kontak-desc button {
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+  background-color: var(--warna2);
+  color: var(--warna5);
+  font-family: "Comfortaa", sans-serif;
+  font-weight: 500;
+  font-size: 1.3rem;
+  border: 2px solid transparent;
+  border-radius: 999px;
+  box-shadow: 3px 5px 9px 3px #64ccc5c9;
+  display: flex;
+  align-items: center;
+  margin-inline: auto;
+}
+
+.contact .kontak-list .kontak-desc button:hover {
+  box-shadow: none;
+  border: 2px solid var(--warna3);
+  background-color: var(--warna3);
+}
+
+.contact .kontak-list .kontak-desc button i {
+  font-size: 1.7rem;
+  margin-right: 1rem;
+}
+
+footer {
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  background: linear-gradient(to right, var(--warna3), var(--warna2));
+  padding-block: 5svh;
+  padding-inline: 7svw;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer .company img {
+  width: 13svw;
+}
+
+footer .company p {
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 3rem;
+}
+
+footer .medsos p {
+  text-align: center;
+}
+
+footer .medsos ul {
+  text-align: center;
+  display: flex;
+  column-gap: 3rem;
+  justify-content: space-around;
+  padding-inline: 0;
+}
+
+footer .medsos ul li {
+  list-style-type: none;
+  font-size: 1.1rem;
+}
+
+footer .medsos ul li a {
+  text-decoration: none;
+  color: var(--warna5);
+}
+
+footer .medsos ul li a p {
+  margin-block: 0.5rem;
+}
+
+.credit {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  margin-top: 3rem;
+  color: var(--warna1);
+  justify-content: center;
+  flex-flow: column;
+  row-gap: 0.5rem;
+}
+
+.credit img {
+  width: 6.5svw;
+}
+
+.credit img:hover {
+  filter: brightness(0);
+}
+
+@media screen and (max-width: 900px) {
+  nav .nav-box {
+    flex-direction: column;
+    padding: 0.5rem;
+    width: 100vw;
+  }
+
+  .nav-box .menu-list ul {
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 1rem;
+    column-gap: 0.5rem;
+  }
+
+  .nav-box .menu-list ul li {
+    margin-inline: 0rem;
+  }
+
+  .about,
+  .service,
+  .contact {
+    padding-block: 2svh;
+  }
+
+  .banner {
+    flex-direction: column-reverse;
+    padding-inline: 5svw;
+    height: fit-content;
+    padding-top: 25svh;
+    padding-bottom: 7svh;
+  }
+
+  .banner-desc {
+    text-align: center;
+  }
+
+  .banner .banner-desc h1 {
+    font-size: 2.5rem;
+  }
+
+  .banner .banner-desc p {
+    font-size: 1rem;
+  }
+
+  .banner .banner-img img {
+    width: 55svw;
+  }
+
+  .about > p {
+    line-height: 2rem;
+  }
+
+  .about .tentang-item ul {
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 1rem;
+  }
+
+  .about .tentang-item ul li {
+    flex-direction: row;
+    text-align: start;
+    gap: 2rem;
+  }
+
+  .service .layanan-list ul {
+    padding: 0;
+    flex-direction: column;
+    row-gap: 3rem;
+  }
+
+  .service .layanan-list ul li img {
+    width: 45svw;
+  }
+
+  .contact .kontak-list {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .contact .kontak-list img {
+    width: 65svw;
+  }
+
+  .contact .kontak-list .kontak-desc button {
+    font-size: 1rem;
+    margin-bottom: 1.7rem;
+    margin-inline: auto;
+  }
+
+  .contact .kontak-list .kontak-desc button i {
+    font-size: 1.3rem;
+    margin-right: 1rem;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-evenly;
+  }
+
+  footer .medsos ul {
+    column-gap: 1.5rem;
+  }
+
+  footer .company img {
+    width: 43svw;
+  }
+
+  footer .company p {
+    font-weight: 300;
+    font-size: smaller;
+    margin-top: 1rem;
+  }
+
+  footer .medsos p {
+    display: none;
+  }
+
+  footer .medsos ul li {
+    font-size: 1.5rem;
+  }
+
+  .credit {
+    margin-block: 1rem 0;
+    margin-inline: auto;
+    flex-direction: row;
+    font-size: large;
+  }
+
+  .credit img {
+    width: 17svw;
+  }
+}
